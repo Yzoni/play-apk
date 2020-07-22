@@ -1,0 +1,11 @@
+version: '3'
+services:
+        android-app-build:
+                build: .
+                environment:
+                        - GSFID=
+                        - AUTHSUBTOKEN=
+                        - PYTHONUNBUFFERED=0
+                volumes:
+                        - /mnt/raiddrives/yrck.nl-files/android-apps:/src/download-dir
+                command: ['/src/get_creds.sh']
